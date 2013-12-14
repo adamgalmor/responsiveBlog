@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="assets\css\bootstrap.css" rel="stylesheet">
+		<link href="assets\css\bootstrap-responsive.css" rel="stylesheet">
+		<link href="assets\css\grid.css" rel="stylesheet">
+		<script type="text/javascript" src="assets\js\jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(".btn").click(function() {
+					$("#sidebar").toggleClass("sidebar-change");
+					$("#content").toggleClass("content-change");
+				});
+			});
+		</script>
+		<style type="text/css">
+		 body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+	      }
+
+	      /* Wrapper for page content to push down footer */
+	      #wrap {
+	        min-height: 100%;
+	        height: auto !important;
+	        height: 100%;
+	        /* Negative indent footer by it's height */
+	        margin: 0 auto -60px;
+	      }
+
+	      /* Set the fixed height of the footer here */
+	      #push,
+	      #footer {
+	        height: 60px;
+	      }
+	      #content{
+      		background-color: white;
+			border-color: white;
+	      }
+	      .content-change{
+	      	width: 1000px;
+	      	position: absolute;
+	      	transition: all 1s;
+			transition-timing-function: ease-in-out;
+	      }
+	      #footer {
+	        background:black;
+			color:white;
+	        height: 30px;
+	        vertical-align: middle;
+	      }
+		#sidebar{
+			background-color: white;
+			border-color: white;
+			transition-timing-function: ease-in-out;
+			}
+		.sidebar-change{
+			-webkit-transform: translateX(-3000px);
+			transition: 1s;
+			transition-timing-function: ease-in-out;
+		}
+	      /* Lastly, apply responsive CSS fixes as necessary */
+	      @media (max-width: 767px) {
+	        #footer {
+	          margin-left: -20px;
+	          margin-right: -20px;
+	          padding-left: 20px;
+	          padding-right: 20px;
+	        }
+	      }
+	      a, a:hover {
+				color: #FFFFFF;
+				text-decoration: underline;
+			}
+			p {
+				text-align: center;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id='wrap'>
+			<div class="container">
+				<div class="page-header">
+					<h1>2 Column Fixed Layout Example</h1>
+				</div>
+				<div class="row">
+					<div class="col-md-4" id="sidebar">side bar content<br>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					</div>
+					<div class="col-md-8" id="content">content<br>
+						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur<br><div id="push"></div>
+						<p><button class="btn btn-primary">Toggle Side</button></p>
+					</div>
+				</div>
+				<div id="push"></div>
+			</div>
+				<div class="container" id="footer">
+					<p class="muted credit">
+						<a href="http://initech.co.il/" style="text-align: center">Initech</a>
+					</p>
+				</div>
+		</div>
+	</body>
+</html>
